@@ -1,3 +1,5 @@
+package com.examen.arquitectura.user.model;
+
 import javax.persistence.*;
 import java.util.Date;
 

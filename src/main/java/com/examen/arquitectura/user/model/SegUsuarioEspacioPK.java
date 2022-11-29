@@ -1,3 +1,5 @@
+package com.examen.arquitectura.user.model;
+
 import lombok.Data;
 
 import javax.persistence.*;
