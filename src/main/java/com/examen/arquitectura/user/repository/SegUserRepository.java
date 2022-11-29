@@ -6,7 +6,11 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.examen.arquitectura.user.model.SegUser;
+
 @Repository
 public interface SegUserRepository extends JpaRepository<SegUser, Integer> {
 	List<SegUser> findByCodeUser(Integer codeUser);
+
+	List<SegUser> findByStatus(String status);
 }

@@ -1,17 +1,16 @@
 package com.examen.arquitectura.user.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Date;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-
 @Entity
 @Table(name = "gdc_espacio_historial")
 @Data
 @NoArgsConstructor
-public class HistorySpace {
+public class GdcEspacioHistorial {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +18,7 @@ public class HistorySpace {
 
 	@ManyToOne
 	@JoinColumn(name = "cod_espacio", nullable = false)
-	private Space codEspacio;
+	private GdcEspacio codEspacio;
 
 	@Column(name = "fecha", nullable = false)
 	@Temporal(TemporalType.TIMESTAMP)
@@ -34,8 +33,8 @@ public class HistorySpace {
 	@Column(name = "descripcion", length = 128, nullable = false)
 	private String descripcion;
 
-	public HistorySpace(Space codEspacio){
-		this.codEspacio = codEspacio;
+	public GdcEspacioHistorial(Integer codEspacioHistorial) {
+		this.codEspacioHistorial = codEspacioHistorial;
 	}
 
 }

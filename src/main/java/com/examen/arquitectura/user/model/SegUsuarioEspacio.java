@@ -1,6 +1,6 @@
 package com.examen.arquitectura.user.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,7 +28,7 @@ public class SegUsuarioEspacio {
 	@JoinColumn(name = "code_user", nullable = false, insertable = false, updatable = false)
 	private SegUser codeUser;
 
-	public SegUsuarioEspacio(SegUsuarioEspacioPK id){
+	public SegUsuarioEspacio(SegUsuarioEspacioPK id) {
 		this.id = id;
 	}
 }

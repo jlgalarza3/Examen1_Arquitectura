@@ -1,9 +1,10 @@
 package com.examen.arquitectura.user.model;
 
-import javax.persistence.*;
-
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Date;
 
 @Entity
 @Table(name = "seg_user")
@@ -14,7 +15,7 @@ public class SegUser {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer codeUser;
-	
+
 	@Column(name = "username", length = 32, nullable = false)
 	private String username;
 
@@ -31,7 +32,7 @@ public class SegUser {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date creationDate;
 
-	public SegUser(Integer codeUser){
+	public SegUser(Integer codeUser) {
 		this.codeUser = codeUser;
 	}
 

@@ -1,6 +1,6 @@
 package com.examen.arquitectura.user.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Date;
 
 import lombok.Data;
@@ -29,8 +29,8 @@ public class GdcEspacio {
 	@Column(name = "visibilidad", length = 3, nullable = false)
 	private String visibilidad;
 
-	public GdcEspacio(Integer codEspacio){
+	public GdcEspacio(Integer codEspacio) {
 		this.codEspacio = codEspacio;
 	}
-	
+
 }

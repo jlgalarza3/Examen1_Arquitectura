@@ -2,9 +2,8 @@ package com.examen.arquitectura.user.model;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
-
 
 @Data
 @Embeddable
@@ -15,5 +14,5 @@ public class SegUsuarioEspacioPK extends Serializable {
 
 	@Column(name = "code_user", nullable = false)
 	private Integer codeUser;
-	
+
 }
